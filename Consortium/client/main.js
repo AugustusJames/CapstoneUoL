@@ -1,22 +1,39 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-
+import { Messages } from "/imports/api/messages";
+import { Accounts } from "meteor/accounts-base";
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
+Accounts.ui.config({
+  passwordSignupFields: "USERNAME_AND_EMAIL",
 });
 
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
+
+Template.chat.helpers({
+  messages() {
+    return Messages.find();
   },
+  getUserName(userId) {
+    if (userId) {
+      const user = Meteor.users.findOne(userId);
+      if (user) return user.username;
+    }
+  },
+  formatDate(date) {
+    return date.toLocaleString();
+  }
 });
 
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+Template.chat.events({
+  'submit #chat-form'(event, instance) {
+    event.preventDefault();
+    const text = event.target.text.value;
+    Meteor.call('messages.insert', text, (err) => {
+      if(err) {
+        alert(err.message);
+      } else {
+        // reset the form
+        event.target.reset();
+      }
+    });
+  }
 });
