@@ -1,4 +1,55 @@
 body {
-  padding: 10px;
+ 
+  background-size: cover;
   font-family: sans-serif;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255) , rgb(133, 231, 255));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+.main-heading {
+  text-align: center;
+}
+
+.container-chat {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  margin-left: 1em
+}
+
+.rooms-div {
+  padding: 0 1em 1em 1em;
+  border: solid 1px #2c2b2b;
+  border-radius: 8px;
+  flex-direction: row;
+  
+}
+
+.new-room-div {
+  margin-top: 1em;
+  padding: 0 1em 1em 1em;
+  border: solid 1px #000000;
+  border-radius: 8px;
+  
+
+}
+
+.single-chat-div {
+  
+  padding: 0 1em 1em 1em;
+  border: solid 1px #000000;
+  border-radius: 8px;
+  height: 350px;
+
+}
+
+.chat-manage-div {
+ 
+  padding: 0 1em 1em 1em;
+  border: solid 1px #000000;
+  border-radius: 8px;
 }
