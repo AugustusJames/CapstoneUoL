@@ -1,0 +1,350 @@
+<body>
+    <!--Main Navigation-->
+<header>
+  <style>
+      blockquote {
+margin: 0;
+}
+
+blockquote p {
+padding: 15px;
+background: #eee;
+border-radius: 5px;
+}
+
+blockquote p::before {
+content: '\201C';
+}
+
+blockquote p::after {
+content: '\201D';
+}
+    /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
+
+    .carousel-item:nth-child(1) {
+      background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .carousel-item:nth-child(2) {
+      background-image: url('https://images.unsplash.com/photo-1603987248955-9c142c5ae89b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .carousel-item:nth-child(3) {
+      background-image: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
+      }
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 50vh;
+      }
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+  </style>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <div class="navbar-brand nav-link me-auto">
+        <h3>
+            <strong>Consortium</strong>
+        </h3>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav d-flex flex-row ms-auto">
+            
+          <!-- Icons -->
+          <li class="nav-social nav-item me-3 me-lg-0">
+            {{> loginButtons align="right"}}
+          </li>
+          <li class="nav-social nav-item me-3 me-lg-0">
+            
+          </li>
+          
+          
+         
+        </ul>
+      </div>
+    </div>
+   
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Carousel wrapper -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+       
+        <div class="mask position-absolute top-0 end-0 bottom-0 start-0 " style="background-color: rgba(0, 0, 0, 0.6)"></div>
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Sign up for an Account</h1>
+          <h5>Join others in your trade</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        
+        <div class="mask position-absolute top-0 end-0 bottom-0 start-0 " style="background-color: rgba(0, 0, 0, 0.6)"></div>
+        <div class="carousel-caption d-none d-md-block">
+            <h1>Have an oddball question? </h1>
+            <h5 class="mb-4">Talk with people that do it for a living! </h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+       
+        <div class="mask position-absolute top-0 end-0 bottom-0 start-0 " style="background-color: rgba(0, 0, 0, 0.6)"></div>
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Discover what the grass on the other side is like!</h1>
+          
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+<!--Main Navigation-->
+<hr/>
+{{#if currentUser}}
+  <div class="container-fluid">
+      <section>
+        <div class="css-welcome-chat">
+          <h1 class="css-header-lg">Welcome to the Chat Page!</h1>
+          <p class="css-main-text">Have a question?</p>
+          <hr/>
+          <p class="css-sub-text">Don't be shy, ask away! <br/> This is a place for sharing Trade tips & asking questions!</p>
+          <p class="">
+            <!-- <button class="btn-css">Button</button> -->
+          </p>
+        </div> <!-- end of css-welcome-chat div-->
+
+
+          <div class="row align-items-start">
+          <div class="col">
+            <!-- <div class="card">
+              <div class="card-header css-header-chat">
+                  <h3 class="text-center">Group Chat</h3>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Have a question?</h5>
+                <p class="card-text text-center">Don't be shy, ask away!</p>
+              </div>
+            </div> -->
+              <!-- <h4 class="text-center"><strong>Welcome to the chat page!</strong></h4> -->
+              <!-- text holder --> 
+              
+              <hr/>
+              <div class="css-chat-window">
+                <div class="list-group css-chat-box">
+                    <a href="#" class="list-group-item list-group-item-action">
+                      <div class="d-flex w-100 justify-content-between">
+                        <!-- <h2 class="text-center">Group Chat</h2> -->
+                      </div>
+                      <p class="mb-1">
+                          <ul>  
+                        {{#each messages}}
+                          {{> message}}
+                        {{/each}}
+                        </ul>   
+                      </p>
+                    </a>
+                  </div>
+               <br/>
+                <form class="new-message">
+              <div class="panel-footer">
+                <div class="input-group">
+                  <input type="text" name="text" class="form-control" placeholder="Enter Message" />
+                  <span class="input-group-btn">
+                    <button class="btn-css" type="submit">SEND</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div> <!-- end of css-chat-window div-->
+          </div> <!-- end of col -->
+          <!-- <div class="col">
+              
+            
+                <div class="card css-quote-box">
+                  <div class="card-header css-quote-header">
+                    <h5 class="text-center">
+                      Quote of the day
+                    </h5>
+                  </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p>To jaw-jaw is always better than to war-war.</p>
+                      <footer class="blockquote-footer">Winston Churchill <cite title="Source Title">Britannica</cite></footer>
+                    </blockquote>
+                  </div>
+                </div> end of card css-quote-box div -->
+          <!-- </div> end of col -->
+          </div> <!-- end of row align-items-start div -->
+      </section> 
+  </div>  <!-- end of container-->
+  {{else}}
+  <div class="css-welcome-chat">
+    <h1 class="css-header-lg">Welcome to the Consortium</h1>
+    <p class="css-main-text">Join forces, lend a hand or find something new!</p>
+    <hr/>
+    <blockquote class="blockquote mb-0">
+      <p>To jaw-jaw is always better than to war-war.</p>
+      <footer class="blockquote-footer">Winston Churchill <cite title="Source Title">Britannica</cite></footer>
+    </blockquote>
+    <p class="">
+      <!-- <button class="btn-css">Button</button> -->
+    </p>
+  </div> <!-- end of css-welcome-chat div-->
+
+{{/if}}
+<hr/>
+<section class="text-center">
+    <h4 class="d-flex p-2 bd-highlight css-event-container d-flex justify-content-center"><strong>Meet & Greet Events</strong></h4>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-12 mb-4">
+        <div class="card css-card-events">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img
+              src="https://images.unsplash.com/photo-1483201811930-882b8be091e0?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">BBQ & Fireworks</h5>
+            <p class="card-text">
+              Eat some meat & meet while you eat! <hr/> Bring Your Own Blankets!
+            </p>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card css-card-events">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img
+              src="https://images.unsplash.com/photo-1586855471379-27e05b3006ae?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Poker Night</h5>
+            <p class="card-text">
+              Are you feeling lucky? <hr/> Proceeds go to charity!
+            </p>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card css-card-events">
+          <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            <img
+              src="https://images.unsplash.com/photo-1632383380175-812d44ec112b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480"
+              class="img-fluid"
+            />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Local EXPO</h5>
+            <p class="card-text">
+              Venders from around the World <hr/> Tickets on sale now!
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="css-footer">
+    
+  
+    <div class="text-center py-4 align-items-center">
+        
+      <p>
+          <h3>
+         Follow us on social media
+        </h3>
+      </p>
+      <a
+        href="https://www.youtube.com"
+        class="btn-css"
+        role="button"
+        rel="nofollow"
+        target="_blank"
+      ><i class="fab fa-youtube"></i></a>
+      <a
+        href="https://www.facebook.com"
+        class="btn-css"
+        role="button"
+        rel="nofollow"
+        target="_blank"
+      ><i class="fab fa-facebook-f"></i></a>
+      <a
+        href="https://twitter.com"
+        class="btn-css"
+        role="button"
+        rel="nofollow"
+        target="_blank"
+      ><i class="fab fa-twitter"></i></a>
+      <a
+        href="https://github.com"
+        class="btn-css"
+        role="button"
+        rel="nofollow"
+        target="_blank"
+      >
+        <i class="fab fa-github"></i>
+      </a> 
+      <hr/>
+      <a href="#"><button class="btn btn-css text-start">Back to top</button></a>
+    </div>
+
+  </footer>
+</body>
+
