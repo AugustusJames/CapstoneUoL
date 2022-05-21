@@ -4,7 +4,7 @@ body {
   scroll-behavior: smooth;
   font-size: 16px;
   background-image: url("https://images.unsplash.com/photo-1444927714506-8492d94b4e3d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776");
-
+  overflow-x: hidden;
 }
 
 
@@ -30,26 +30,29 @@ nav a:hover {
   
 }
 
+/* CHAT STUFF */
+
 .css-chat-window {
   background-color: #ffffff;
   padding: 1em;
   border-radius: 8px;
-  background-color: #01314A;
-  /* background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
+  background-color: #01314A;  
+ 
 }
+
 .css-chat-box {
   height: 400px;
-  overflow-y: auto;
+  overflow-y: scroll;
   box-sizing: border-box;
   border-radius: 8px;
-
-
+  
 }
 .css-chat-box ul {
   border-radius: 8px;
   align-items: center;
-
+  min-height: 350px;
 }
+
 .css-single-message {
   padding: 0 1em;
   border-radius: 8px;
@@ -65,14 +68,12 @@ nav a:hover {
 
 .css-header-chat {
   background-color: #08428E !important;
-  /* background-color: #3C474B; */
   color: #ffffff;
 
 }
 
 .css-quote-header {
   background-color: #08428E !important;
-  /* background-color: #4F7CAC; */
   color: #ffffff;
 }
 
@@ -100,8 +101,6 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.57);
   padding: 1.5em;
   border-radius: 8px;
-  /* background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); */
-  
 }
 .css-header-lg {
   font-size: 3rem;
@@ -117,7 +116,6 @@ nav a:hover {
 .css-event-container {
   letter-spacing: .1em;
   text-decoration: overline;
-  /* background-color: rgba(255, 255, 255, 0.57); */
   height: 7vh;
  
 }

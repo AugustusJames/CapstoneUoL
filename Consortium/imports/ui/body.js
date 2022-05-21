@@ -32,7 +32,10 @@ Template.body.events({
     // Clear form
     target.text.value = '';
     
-    // scroll to last message
-    $('.panel-body').scrollTop($('.media-list').height())
+    // scroll to last message ( scroll-to-bottom / css-chat-window1)
+    //$('.js-panel-body').scrollTop($('.js-messages').height());
+    var element = document.getElementById("js-messages");
+    element.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+
  },
 });

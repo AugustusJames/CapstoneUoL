@@ -148,43 +148,28 @@ content: '\201D';
           <hr/>
           <p class="css-sub-text">Don't be shy, ask away! <br/> This is a place for sharing Trade tips & asking questions!</p>
           <p class="">
-            <!-- <button class="btn-css">Button</button> -->
           </p>
-        </div> <!-- end of css-welcome-chat div-->
-
-
-          <div class="row align-items-start">
-          <div class="col">
-            <!-- <div class="card">
-              <div class="card-header css-header-chat">
-                  <h3 class="text-center">Group Chat</h3>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Have a question?</h5>
-                <p class="card-text text-center">Don't be shy, ask away!</p>
-              </div>
-            </div> -->
-              <!-- <h4 class="text-center"><strong>Welcome to the chat page!</strong></h4> -->
-              <!-- text holder --> 
-              
+        </div> 
+        <div class="row align-items-start">
+          <div class="col">              
               <hr/>
-              <div class="css-chat-window">
-                <div class="list-group css-chat-box">
-                    <a href="#" class="list-group-item list-group-item-action">
+              <div class="css-chat-window" id="css-chat-window1">
+                <div class="list-group css-chat-box" id="css-chat-box">
+                    <div class="list-group-item list-group-item-action">
                       <div class="d-flex w-100 justify-content-between">
-                        <!-- <h2 class="text-center">Group Chat</h2> -->
                       </div>
-                      <p class="mb-1">
-                          <ul>  
+                      <div class="mb-1 js-panel-body" id="js-panel-body">
+                          <ul class="js-messages" id="js-messages">  
                         {{#each messages}}
                           {{> message}}
                         {{/each}}
+                        <a href="" class="d-none" id="scroll-to-bottom">end of messages</a>
                         </ul>   
-                      </p>
-                    </a>
+                      </div>
+                    </div>
                   </div>
                <br/>
-                <form class="new-message">
+                <form class="new-message" id="new-message">
               <div class="panel-footer">
                 <div class="input-group">
                   <input type="text" name="text" class="form-control" placeholder="Enter Message" />
@@ -196,23 +181,6 @@ content: '\201D';
             </form>
           </div> <!-- end of css-chat-window div-->
           </div> <!-- end of col -->
-          <!-- <div class="col">
-              
-            
-                <div class="card css-quote-box">
-                  <div class="card-header css-quote-header">
-                    <h5 class="text-center">
-                      Quote of the day
-                    </h5>
-                  </div>
-                  <div class="card-body">
-                    <blockquote class="blockquote mb-0">
-                      <p>To jaw-jaw is always better than to war-war.</p>
-                      <footer class="blockquote-footer">Winston Churchill <cite title="Source Title">Britannica</cite></footer>
-                    </blockquote>
-                  </div>
-                </div> end of card css-quote-box div -->
-          <!-- </div> end of col -->
           </div> <!-- end of row align-items-start div -->
       </section> 
   </div>  <!-- end of container-->
